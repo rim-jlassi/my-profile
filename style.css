@@ -1,0 +1,255 @@
+/* Reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 0.5em 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin: 0.4em 0 1em 0;
+}
+
+/* Wrapper */
+.wrapper {
+  max-width: 900px;
+  margin: 2rem auto 3rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+/* Cards base */
+.profile-card {
+  border-radius: 15px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 12px 20px rgb(0 0 0 / 0.1);
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgb(0 0 0 / 0.15);
+}
+
+/* Colors */
+.teal-card {
+  background: #00808020;
+  border-left: 8px solid #008080;
+}
+
+.ocean-card {
+  background: #0077b620;
+  border-left: 8px solid #0077b6;
+}
+
+.sky-card {
+  background: #00aaff20;
+  border-left: 8px solid #00aaff;
+}
+
+.coral-card {
+  background: #ff6f6120;
+  border-left: 8px solid #ff6f61;
+}
+
+.lavender-card {
+  background: #a996d720;
+  border-left: 8px solid #a996d7;
+}
+
+.sunset-card {
+  background: #ff775520;
+  border-left: 8px solid #ff7755;
+}
+
+/* Intro Section */
+.intro-section {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: 1rem 0 1.5rem 0;
+  object-fit: cover;
+  border: 4px solid #008080;
+  box-shadow: 0 6px 10px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.07);
+}
+
+/* Content Sections */
+.content-section {
+  width: 100%;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: #008080;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  margin-top: 0.8rem;
+}
+
+.btn-primary:hover {
+  background: #006666;
+}
+
+/* Hobbies */
+.hobbies-section {
+  width: 100%;
+  text-align: center;
+}
+
+.hobby-list {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+}
+
+.hobby-item {
+  background: #a996d7aa;
+  color: #4a3b76;
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  transition: background 0.3s ease;
+}
+
+.hobby-item:hover {
+  background: #a996d7dd;
+}
+
+/* Connect Section */
+.connect-section {
+  width: 100%;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+.social-icons a {
+  font-size: 2.6rem;
+  color: #ff7755;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #cc5a3f;
+}
+
+/* Icon spacing */
+h1 i,
+h2 i,
+.hobby-item i {
+  margin-left: 0.5rem;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* Accessibility focus */
+a:focus,
+button:focus {
+  outline: 3px solid #008080;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .wrapper {
+    margin: 1.5rem auto 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .profile-pic {
+    width: 110px;
+    height: 110px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hobby-list {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .hobby-item {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .social-icons a {
+    font-size: 2.2rem;
+    margin: 0 0.5rem;
+  }
+}
